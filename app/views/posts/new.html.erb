@@ -1,0 +1,19 @@
+<%=form_for(@post) do |f|%>
+<%=f.label :title%>
+<%=f.text_field :title%>
+
+<%=f.label :body%>
+<%=f.text_field :body%>
+
+<%=f.submit "Create Post"%>
+<% end%>
+
+<%# Capybara does not work without the Form Helpers??  %>
+<%# FOLLOWING DOES NOT SEEM TO WORK.....Capybara does not find fields %>
+<%# <form action="/posts" method="post" id="dojo_create_form">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token_>">
+    <label for="post[title]">Title:</label>
+    <input type="text" name="dojo[title]" >
+    <input type="submit" value = "Submit">
+</form> %>
+ <%# <input type="text" name="dojo[title]" value="<%=@post.branch_>" > %>
